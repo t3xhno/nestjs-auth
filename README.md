@@ -34,6 +34,20 @@ $ npm install
 
 ## Running the app
 
+The Postgres database is dockerized, and the image must be installed:
+
+```bash
+docker compose up dev-db -d
+```
+
+Once the docker container with the database is runnig, the database can be removed, brought up again and migrated in a single command:
+
+```bash
+npm run prisma:dev:restart
+```
+
+The nestjs backend itself is run using the following commands:
+
 ```bash
 # development
 $ npm run start
@@ -47,26 +61,7 @@ $ npm run start:prod
 
 ## Test
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+TBD
 
 ## License
 
